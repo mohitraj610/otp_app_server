@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://mohitraj610.github.io/otp_base_server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +21,8 @@
     "fast-two-sms": "^3.0.0",
     "mongoose": "^6.2.10",
     "sendotp": "^1.2.9"
+  },
+  "engines": {
+    "node": "14.0.0"
   }
 }
