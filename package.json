@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://mohitraj610.github.io/otp_base_server",
+  "homepage": "http://mohitraj610.github.io/otp_app_server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false",
     "start": "node src/index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
   },
